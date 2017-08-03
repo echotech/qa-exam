@@ -5,8 +5,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.incomm</groupId>
-    <artifactId>qa</artifactId>
+    <artifactId>qa-exam</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
 
+    <modules>
+        <module>web</module>
+        <module>qa</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.2.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
