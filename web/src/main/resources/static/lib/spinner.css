@@ -1,0 +1,17 @@
+.spinner-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(119, 120, 123, 0.1);
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.spinner-wrapper .spinner-loader {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
