@@ -6,7 +6,7 @@
 		template: '' +
 		          '<div class="spinner-wrapper" ng-if="vm.isSpinning()" ng-click="$event.stopPropagation()">' +
 		          ' <div class="spinner-loader" layout="column" layout-align="center center">' +
-		          '     <md-progress-circular class="md-primary" md-diameter="20"></md-progress-circular>' +
+		          '     <md-progress-circular class="md-accent" md-diameter="20"></md-progress-circular>' +
 		          ' </div>' +
 		          '</div>',
 		controller: SpinnerController,

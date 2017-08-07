@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="qa">
 <head>
 	<title>InComm QA Exam</title>
 	
@@ -7,14 +7,42 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	
-	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.min.css"/>
-	<link type="text/css" rel="stylesheet" href="lib/spinner.css"/>
-	<link type="text/css" rel="stylesheet" href="main.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.min.css"/>
+	<link rel="stylesheet" href="lib/spinner.css"/>
+	<link rel="stylesheet" href="main.css"/>
 </head>
-<body>
+<body ng-controller="IndexController as vm" ng-cloak >
 
 
-Hello, world.
+<div layout="row" layout-align="center center" >
+	<md-content class="md-whiteframe-1dp" style="width:250px;margin-top: 100px; padding-top: 30px" layout-padding>
+		<form name="login" ng-submit="vm.login()">
+			<md-input-container id="username" style="width:220px">
+				<label>Username</label>
+				<input ng-model="vm.username" required>
+			</md-input-container>
+			
+			<md-input-container id="password" style="width:220px">
+				<label>Password</label>
+				<input ng-model="vm.password" type="password" required>
+			</md-input-container>
+			<div layout="row" layout-align="end center">
+				<md-button id="submit" type="submit" class="md-raised md-primary" ng-disabled="login.$invalid">
+					Login
+					<spinner></spinner>
+				</md-button>
+			</div>
+		</form>
+		<div class="md-whiteframe-1dp success panel" ng-if="vm.isCalled && vm.isSuccess">
+			Success!
+			
+		</div>
+		<div class="md-whiteframe-1dp error panel" ng-if="vm.isCalled && !vm.isSuccess">
+			Failed!
+		</div>
+		
+	</md-content>
+</div>
 	
 	
 	
