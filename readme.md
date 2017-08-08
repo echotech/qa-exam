@@ -37,10 +37,9 @@ so that I have access to the QA Exam application.
 
 ##Optional Bonus Tasks:
 1. Using the data in the grid below, iterate through the data in your test
-
 | Username      | Password      | Expected Condition | 
 | ------------- | ------------- | ------------------ |
 | guest | password | Success! | 
 | anyUser | anyPass | Failure! | 
-
 2. Execute the tests via a TestNG suite
+3. Execute your tests against multiple browsers
