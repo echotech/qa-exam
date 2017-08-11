@@ -17,7 +17,7 @@ Good Luck!
 2. Start the sample application server using one of the following methods:
     * Execute the `Application.java` class via command line
     * In your IDE, right-click the `Application.java` class and `Run`
-    * From within the `web` directory, execute `mvn springboot:run`
+    * From within the `web` directory, execute `mvn spring-boot:run`
 3. Navigate your browser to `http://localhost:8080`, where you should find a simple login form
 
 ##User Story:
