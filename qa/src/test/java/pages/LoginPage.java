@@ -25,7 +25,7 @@ public class LoginPage {
     WebElement alertPanel;
 
 
-    public boolean testLogin(String user, String pass){
+    public String testLogin(String user, String pass){
         driver.navigate().to("http://localhost:8080");
         h.waitForElement(loginField);
         loginField.sendKeys(user);
@@ -34,13 +34,12 @@ public class LoginPage {
         h.waitForElement(alertPanel);
         if (alertPanel.getText().contains("Failed!")){
             //System.out.println(alertPanel.getText());
-            return false;
+            return alertPanel.getText();
         } else if(alertPanel.getText().contains("Success!")){
             //System.out.println(alertPanel.getText());
-            return true;
+            return alertPanel.getText();
         } else {
-            //System.out.println("Couldn't find failed or success.");
-            return false;
+            return  "Couldn't find failed or success.";
         }
     }
 }
